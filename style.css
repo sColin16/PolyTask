@@ -14,10 +14,6 @@ PolyTask Pre-Alpha Phase
 
 ********/
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
-}
-
 body {
   font-family: "Open Sans";
   font-size:24px;
@@ -97,12 +93,10 @@ Define the color pallete of the application
     font-size:44px;
     background:#f22613;
     color:white;
-    
 }
 
 .title-wrapper h1 {
     margin:0;
-    font-weight:bold;
 }
 
 .dashboard-box {
@@ -131,10 +125,10 @@ Define the color pallete of the application
 Prevent font from rendering larger than intended on iPhone
 */
 
-@media screen and (max-device-width: 480px){
-  body{
-    -webkit-text-size-adjust: none;
-  }
+@media screen and (max-width: 480px) {
+    body {
+        -webkit-text-size-adjust: none;
+    }
 }
 
 /* Palette URL: http://paletton.com/#uid=72Y0u0kw0XqdBXGntXnViMFPMoD*/
