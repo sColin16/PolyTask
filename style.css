@@ -15,9 +15,9 @@ PolyTask Pre-Alpha Phase
 ********/
 
 body {
-  /*font-family: "Open Sans", sans-serif;*/
+  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
   font-size:24px;
-  margin:0px;
+  margin:0;
   -moz-osx-font-smoothing: grayscale;
 -webkit-font-smoothing: antialiased;
 }
