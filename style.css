@@ -18,6 +18,8 @@ body {
   font-family: "Open Sans";
   font-size:24px;
   margin:0px;
+  -moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
 }
 
 html {
