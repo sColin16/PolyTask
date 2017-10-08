@@ -16,6 +16,12 @@ PolyTask Pre-Alpha Phase
 
 window.onLoad = onLoad();
 
+window.addEventListener("scroll", onScroll);
+
+function onScroll(){
+    console.log(window.scrollY);
+}
+
 function onLoad(){
     //append event listeners to navigation buttons
     console.log("running");
