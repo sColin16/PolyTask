@@ -121,15 +121,18 @@ Define the color pallete of the application
     
 }
 
+@media screen and (max-device-width: 480px){
+  body{
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
 /*
 Prevent font from rendering larger than intended on iPhone
 */
 
-@media screen and (max-width: 480px) {
-    body {
-        -webkit-text-size-adjust: none;
-    }
-}
+
 
 /* Palette URL: http://paletton.com/#uid=72Y0u0kw0XqdBXGntXnViMFPMoD*/
 /* New Palette URL: http://paletton.com/#uid=7040u0ktvund2KvlpxqvXm5IGdJ*/
