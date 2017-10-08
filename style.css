@@ -15,8 +15,8 @@ PolyTask Pre-Alpha Phase
 ********/
 
 body {
-  font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif;
-  font-size:24px;
+  font-family: Trebuchet MS;
+  font-size:23px;
   margin:0;
   -moz-osx-font-smoothing: grayscale;
 -webkit-font-smoothing: antialiased;
@@ -126,6 +126,7 @@ Define the color pallete of the application
 @media screen and (max-device-width: 480px){
   body{
     -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
   }
 }
 
