@@ -97,10 +97,12 @@ Define the color pallete of the application
     font-size:44px;
     background:#f22613;
     color:white;
+    
 }
 
 .title-wrapper h1 {
     margin:0;
+    font-weight:bold;
 }
 
 .dashboard-box {
