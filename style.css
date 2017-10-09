@@ -48,7 +48,7 @@ Define the color pallete of the application
 
 #navbar {
     position:fixed;
-    bottom:0px;
+    bottom:0;
     width:100%;
     height:125px;
     background:#f2f2f2;

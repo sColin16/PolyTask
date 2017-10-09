@@ -20,6 +20,7 @@ window.addEventListener("scroll", onScroll);
 
 function onScroll(){
     console.log(window.scrollY);
+    document.getElementsByClassName("day-counter-number")[0].innerHTML = window.scrollY
 }
 
 function onLoad(){
