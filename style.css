@@ -112,15 +112,55 @@ Define the color pallete of the application
 
 .dashboard-box-title {
     padding:20px;
-    margin:0px;
+    margin:0;
     position:relative;
     color:white
+}
+
+.project-container {
+    height: 210px;
+}
+
+.day-counter {
+    height:100%;
+    display:inline-block;
+    text-align:center;
+    left:0;
+    width:20%;
+    margin:0;
+}
+
+.day-counter-number {
+    font-size:128px;
+    margin:0 20px;
+}
+
+.day-counter-label {
+    margin:0 30px;
+}
+
+.project-description {
+    height:100%;
+    margin-left:-7px;
+    background:#84DF98;
+    width:80%;
+    vertical-align:top;
+    display:inline-block;
+}
+
+.project-name {
+    font-size:72px;
+    margin:20px;
+}
+
+.project-info {
+    font-size:44px;
+    margin:0 40px;
 }
 
 .buffer {
     width:100%;
     height:100px;
-    
 }
 
 @media screen and (max-device-width: 480px){
