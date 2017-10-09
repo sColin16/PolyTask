@@ -42,7 +42,9 @@ function onLoad(){
         appendListener(navButtons[i]);
     }
     
-    openTab("dashboard");
+    openTab("today");
+    document.getElementsByClassName("input")[0].focus();
+    document.getElementsByClassName("input")[0].select();
 }
 
 function hideTabs(){

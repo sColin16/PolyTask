@@ -168,6 +168,14 @@ Define the color pallete of the application
     height:125px;
 }
 
+.input {
+    width:80%;
+    height:100px;
+    margin-left:10%;
+    font-size:44px;
+    font-family: Trebuchet MS;
+}
+
 @media screen and (max-device-width: 480px){
   body{
     -webkit-text-size-adjust: none;
