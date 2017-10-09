@@ -23,6 +23,7 @@ function onScroll(){
     document.getElementsByClassName("day-counter-number")[0].innerHTML = window.scrollY;
     if(window.scrollY < -100){
         document.getElementById("Test").style.display = "block";
+        prompt("Enter Idea");
     } else {
         document.getElementById("Test").style.display = "none"
     }
@@ -42,9 +43,7 @@ function onLoad(){
         appendListener(navButtons[i]);
     }
     
-    openTab("today");
-    document.getElementsByClassName("input")[0].focus();
-    document.getElementsByClassName("input")[0].select();
+    openTab("dashboard");
 }
 
 function hideTabs(){
