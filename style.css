@@ -95,6 +95,10 @@ Define the color pallete of the application
     font-size:44px;
     background:#f22613;
     color:white;
+    top: 0;
+    position:fixed;
+    width:100%;
+    z-index:1;
 }
 
 .title-wrapper h1 {
@@ -160,7 +164,7 @@ Define the color pallete of the application
 
 .buffer {
     width:100%;
-    height:100px;
+    height:125px;
 }
 
 @media screen and (max-device-width: 480px){
