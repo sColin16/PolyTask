@@ -21,11 +21,9 @@ window.addEventListener("scroll", onScroll);
 function onScroll(){
     console.log(window.scrollY);
     document.getElementsByClassName("day-counter-number")[0].innerHTML = window.scrollY;
-    if(window.scrollY < -100){
-        document.getElementById("Test").style.display = "block";
+    if(window.scrollY < -150){
         prompt("Enter Idea");
     } else {
-        document.getElementById("Test").style.display = "none"
     }
 }
 
