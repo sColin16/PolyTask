@@ -90,13 +90,14 @@ Define the color pallete of the application
 }
 
 .title-wrapper {
+    position:fixed;
     text-align:left;
     padding: 10px 50px;
     font-size:44px;
     background:#f22613;
     color:white;
     top: 0;
-    position:fixed;
+    vertical-align: top;
     width:100%;
     z-index:1;
 }
