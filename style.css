@@ -175,6 +175,13 @@ Define the color pallete of the application
   }
 }
 
+#Test {
+    z-index:0;
+    font-size: 100px;
+    display: none;
+    position:fixed;
+}
+
 /*
 Prevent font from rendering larger than intended on iPhone
 */
