@@ -43,12 +43,12 @@ PolyTask Pre-Alpha Phase
             <div class = "dashboard">
                 <div class = "title-wrapper"><h1>Dashboard</h1></div>
                 
-                <div class = buffer></div>
+                <div class = "upper-buffer"></div>
                 
                 <div class = dashboard-box>
                     <h1 class = "dashboard-box-title primary-green">Upcoming Projects</h1>
                     
-                    <div class = "project-container-list secondary-green">
+                    <div class = "dashboard-box-content secondary-green">
                         <div class = "project-container">
                             <div class = "day-counter">
                                 <h1 class = "day-counter-number">1</h1>
@@ -110,7 +110,6 @@ PolyTask Pre-Alpha Phase
                         <p style = "font-size:44px;padding:15px 80px;margin:0"><b>Assign Tasks for Career Contact</b></p>
                     </div>
                 </div>
-                
                 <div class = "dashboard-box">
                     <h1 class = "primary-purple" style = "padding:20px; margin:0px; position:relative; color:white">Your tasks</h1>
                     
@@ -123,7 +122,6 @@ PolyTask Pre-Alpha Phase
                         <p style = "font-size:44px;padding:15px 80px;margin:0"><b>Assign Tasks for Career Contact</b></p>
                     </div>
                 </div>
-                
                 <div class = dashboard-box>
                     <h1 style = "padding:20px; margin:0px; position:relative; background: #F28013; color:white">Today's Tasks</h1>
                     <div style= "background:#FFCA97;width:100%;vertical-align:top;">
@@ -137,7 +135,7 @@ PolyTask Pre-Alpha Phase
                     </div>
                 
                 </div>
-                <div class = buffer></div>
+                <div class = "lower-buffer"></div>
                 
             </div>
             <div class = "today">
@@ -148,6 +146,7 @@ PolyTask Pre-Alpha Phase
                 
             </div>
             <div class = "tasks">
+                <div class = "upper-buffer"></div>
                 <div class = "title-wrapper"><h1>All Tasks</h1></div>
                 <p style = "text-align:center">Coming Soon</p>
                 <p style = "text-align:center">This is a comprehensive view of all your projects and tasks<br>it will allow for editing of specifics of projects</p>
@@ -157,7 +156,48 @@ PolyTask Pre-Alpha Phase
                 <p style = "text-align:center">Coming Soon</p>
                 <p style = "text-align:center">This is where you can configure your experience: <br> from colors to app behavoirs, settings will ensure an easy to use experience</p>
             </div>
+            
         </div>
+        
+        <!-- Overlay divisions-->
+        
+        <div id = "new-idea-wrapper" class = "overlay-backdrop">
+            <div id = "new-idea" class = "overlay-content">
+                <div class = "overlay-title"><h1>New Task</h1></div>
+                <input type = "text" class = "title-input" id = "new-idea-title">
+            
+                <!--Due date Toggle Buttons, etc-->
+                
+                <div class = "confirmation-wrapper">
+                    <button class = "cancel button">Cancel</button>
+                    <button class = "confirm button">Confirm</button>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!--Templates -->
+        <template id = "dashboard-box-template-wrapper">
+            <div id = "dashboard-box-template" class = "dashboard-box">
+                <h1 class = "dashboard-box-title"></h1>
+                <div class = "dashboard-box-content">
+                    <!--Dashboard content goes here-->
+                </div>
+            </div>
+        </template>
+        
+        <template id = "project-container-template-wrapper">
+            <div id = "project-container-template" class= "project-container">
+                <div class = "day-counter">
+                    <h1 class = "day-counter-number"></h1>
+                    <h1 class = "day-counter-label"><!--"Day" or "Days"--></h1>
+                </div>
+                <div class = "project-description">
+                    <h1 class = "project-name"></h1>
+                    <p class = "project-info"></p>
+                </div>
+            </div>
+        </template>
         
         <!--Poly Task Script-->
         <script id="source" src="script.js"></script>

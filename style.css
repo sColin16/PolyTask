@@ -15,11 +15,11 @@ PolyTask Pre-Alpha Phase
 ********/
 
 body {
-  font-family: Trebuchet MS;
-  font-size:23px;
-  margin:0;
-  -moz-osx-font-smoothing: grayscale;
--webkit-font-smoothing: antialiased;
+    font-family: Trebuchet MS;
+    font-size:23px;
+    margin:0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -54,11 +54,11 @@ Define the color pallete of the application
     background:#f2f2f2;
     border-top:thin solid black;
     z-index: 1;
+    color:white;
 }
 
 #page-wrapper {
     overflow-y: auto;
-    
 }
 
 .navbutton {
@@ -69,6 +69,10 @@ Define the color pallete of the application
     text-align:center;
     display:inline-block;
     color:grey;
+}
+
+.navbutton-active {
+    color:#e32636;
 }
 
 .icontext {
@@ -99,7 +103,7 @@ Define the color pallete of the application
     top: 0;
     vertical-align: top;
     width:100%;
-    z-index:1;
+    z-index:2;
 }
 
 .title-wrapper h1 {
@@ -163,7 +167,12 @@ Define the color pallete of the application
     margin:0 40px;
 }
 
-.buffer {
+.lower-buffer {
+    width:100%;
+    height:125px;
+}
+
+.upper-buffer {
     width:100%;
     height:125px;
 }
@@ -175,6 +184,79 @@ Define the color pallete of the application
     font-size:44px;
     font-family: Trebuchet MS;
 }
+
+.title-input {
+    width: 70%;
+    margin:5% 0 0 15%;
+    font-size:44px;
+    font-family:Trebuchet MS;
+    text-align: center;
+}
+
+.overlay-backdrop {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.overlay-content {
+    background-color: white;
+    position:fixed;
+    width:80%;
+    height:80%;
+    left:10%;
+    top: 8%;
+}
+
+.overlay-title {
+    position:relative;
+    text-align:center;
+    padding: 10px 50px;
+    font-size:44px;
+    background:#f22613;
+    color:white;
+    top: 0;
+    vertical-align: top;
+}
+
+.overlay-title h1 {
+    margin: 0px;
+}
+
+.confirmation-wrapper {
+    width:100%;
+    text-align:center;
+    margin:20px;
+    position:absolute;
+    bottom:0;
+}
+
+.button {
+    font-size:44px;
+    font-family: Trebuchet MS;
+    height:100px;
+    width:200px;
+    margin:50px
+}
+
+.confirm {
+    background-color:#84df98;
+}
+
+.cancel {
+    background-color:#FF6555;
+}
+
+/*
+Prevent font from rendering larger than intended on iPhone
+*/
 
 @media screen and (max-device-width: 480px){
   body{
@@ -190,9 +272,7 @@ Define the color pallete of the application
     position:fixed;
 }
 
-/*
-Prevent font from rendering larger than intended on iPhone
-*/
+
 
 
 
