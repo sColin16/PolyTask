@@ -279,7 +279,8 @@ Define the color pallete of the application
     font-family: Trebuchet MS;
     height:100px;
     width:200px;
-    margin:50px
+    margin:50px;
+    text-align:center;
 }
 
 .confirm {
