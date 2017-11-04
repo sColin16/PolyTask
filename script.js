@@ -14,6 +14,28 @@ PolyTask Pre-Alpha Phase
 
 ********/
 
+//array that stores all of the data related to projects, tasks, etc.
+var objectArray = [];
+
+function Task(name){
+    this.name = name;
+    //add other attributes
+    //type of task, due date, etc.
+    
+    //make inherited forms, like delayed task, etc.
+}
+
+function loadProjects(){
+    objectArray = [];
+    var cache = localStorage.getItem("PolyTaskObject");
+    objectArray = JSON.parse(cache);
+}
+
+function saveProjects(){
+    var cache = JSON.stringify(objectArray);
+    localStorage.setItem("PolyTaskObjects", cache);
+}
+
 var scrollThreshold = -200;
 
 window.onLoad = onLoad();
@@ -36,8 +58,8 @@ function onScroll(){
 
 function addIdea(){
     var ideaName = prompt("Enter idea");
-    if(ideaName === null){
-        console.log("Something went wrong");
+    if(ideaName === ""){
+        console.warn("you must add a name");
         return;
     } else{
         document.getElementById("new-idea-wrapper").style.display = "block";
@@ -70,10 +92,32 @@ function newProjectContainer(dashboardBoxName, name, projectInfo, days){
     var dayLabel = document.createTextNode(dayLabel);
 }
 
-function addTask(){
+function addTask(taskName){
+    //add task only to local storage system NOT the actual dashboard
     
+    var newTask = new Task(taskName);
     
+    objectArray.push(newTask);
+    console.log(objectArray);
     
+    updateDashboard(newTask);
+}
+
+function updateDashboard(Task){
+    //handles whether or not a given Task object (or project object in the future) should be appended to the dashboard
+    //logic currently always places the object into the dashboard, onto a single predetermined dashboardBox
+    //In the future, it will be necesary to add logic based on user dashboard settings
+    
+    var newTask = fromTemplate("unordered-dashboard-task");
+    var newTaskName = document.createTextNode(Task.name);
+    
+    var dashboardBox = document.getElementById("dashboard-your-tasks");
+    var dashboardBoxContent = dashboardBox.getElementsByClassName("dashboard-box-content")[0];
+    
+    newTask.id = "";
+    newTask.appendChild(newTaskName);
+    
+    dashboardBoxContent.appendChild(newTask);
 }
 
 function onLoad(){
@@ -81,22 +125,34 @@ function onLoad(){
     console.log("running");
     var navButtons = document.getElementById("navbar").children;
     
-    function appendMainTabListener(object){
-        object.addEventListener("touchstart", function(){openTab(object.classList[0])});
-    }
-    
     for(var i = 0, n = navButtons.length; i<n; i++){
         //use of callback to ensure individual button functionality (due to how javascript passes by reference only for objects)
         appendMainTabListener(navButtons[i]);
     }
     
-    
-    
+    document.getElementById("confirm-task").addEventListener("touchstart", function(){addNewTask(); hideOverlays();});
     
     openTab("dashboard");
-    addIdea();
+    
+    function appendMainTabListener(object){
+        object.addEventListener("touchstart", function(){openTab(object.classList[0])});
+    }
+    
+    function addNewTask(){
+        var newTaskInput = document.getElementById("new-idea-title");
+        
+        var taskName = newTaskInput.value;
+        
+        if(taskName === ""){
+            console.log("You must enter a name")
+            return;
+        }
+        
+        newTaskInput.value = "";
+        
+        addTask(taskName);
+    }
 }
-
 
 function hideTabs(){
     var navButtons = document.getElementById("navbar").children;
@@ -112,4 +168,11 @@ function openTab(name){
     hideTabs();
     document.getElementById("page-wrapper").getElementsByClassName(name)[0].style.display = "block";
     document.getElementById("navbar").getElementsByClassName(name)[0].classList.add("navbutton-active");
+}
+
+function hideOverlays(){
+    var overlays = document.getElementsByClassName("overlay-backdrop");
+    for(var i = 0, n = overlays.length; i<n; i++){
+        overlays[i].style.display = "none";
+    }
 }

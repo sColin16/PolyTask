@@ -98,39 +98,29 @@ PolyTask Pre-Alpha Phase
                     <!-- @TODO: make the project container a template -->
                     
                 </div>
-                <div class = "dashboard-box">
-                    <h1 class = "primary-purple" style = "padding:20px; margin:0px; position:relative; background: #0F8095; color:white">Your tasks</h1>
+                <div id = "dashboard-your-tasks" class = "dashboard-box">
+                    <h1 class = "dashboard-box-title primary-blue">Your tasks</h1>
                     
-                    <div class = "secondary-purple" style= "background:#7BC0CC;width:100%;vertical-align:top;">
-                        <p style = "font-size:44px;padding:15px 80px;margin:0"><b>AP Physics Webassign</b></p>
-                        <p style = "font-size:44px;padding:15px 80px;margin:0"><b>APUSH Chapter 10</b></p>
-                        <p style = "font-size:44px;padding:15px 80px;margin:0"><b>L2K Resume</b></p>
-                        <p style = "font-size:44px;padding:15px 80px;margin:0"><b>German Vocab Review</b></p>
-                        <p style = "font-size:44px;padding:15px 80px;margin:0"><b>Math Homework</b></p>
-                        <p style = "font-size:44px;padding:15px 80px;margin:0"><b>Assign Tasks for Career Contact</b></p>
+                    <div class = "dashboard-box-content secondary-blue">
+                        <p class = "unordered-task dashboard-task">AP Physics Webassign</p>
+                        <p class = "unordered-task dashboard-task">APUSH Chapter 10</p>
+                        <p class = "unordered-task dashboard-task">L2K Resume</p>
+                        <p class = "unordered-task dashboard-task">German Vocab Review</p>
+                        <p class = "unordered-task dashboard-task">Math Homework</p>
+                        <p class = "unordered-task dashboard-task">Assign Tasks for Career Contact</p>
                     </div>
                 </div>
-                <div class = "dashboard-box">
-                    <h1 class = "primary-purple" style = "padding:20px; margin:0px; position:relative; color:white">Your tasks</h1>
-                    
-                    <div class = "secondary-purple" style= "width:100%;vertical-align:top;">
-                        <p style = "font-size:44px;padding:15px 80px;margin:0"><b>AP Physics Webassign</b></p>
-                        <p style = "font-size:44px;padding:15px 80px;margin:0"><b>APUSH Chapter 10</b></p>
-                        <p style = "font-size:44px;padding:15px 80px;margin:0"><b>L2K Resume</b></p>
-                        <p style = "font-size:44px;padding:15px 80px;margin:0"><b>German Vocab Review</b></p>
-                        <p style = "font-size:44px;padding:15px 80px;margin:0"><b>Math Homework</b></p>
-                        <p style = "font-size:44px;padding:15px 80px;margin:0"><b>Assign Tasks for Career Contact</b></p>
-                    </div>
-                </div>
+                
                 <div class = dashboard-box>
-                    <h1 style = "padding:20px; margin:0px; position:relative; background: #F28013; color:white">Today's Tasks</h1>
-                    <div style= "background:#FFCA97;width:100%;vertical-align:top;">
-                        <ol style = "font-size:44px;padding:10px 80px; margin:0px;">
-                            <li><b>Language Activity Write Sentence 3X</b></li>
-                            <li><b>APUSH Chapter 10</b></li>
-                            <li><b>Turn in Log #1</b></li>
-                            <li><b>AP Physics Webassign</b></li>
-                            <li><b>Second Task</b></li>
+                    <h1 class = "dashboard-box-title primary-orange">Today's Tasks</h1>
+                    
+                    <div class = "dashboard-box-content secondary-orange">
+                        <ol class = "dashboard-list">
+                            <li class = "ordered-task dashboard-task">First Task</li>
+                            <li class = "ordered-task dashboard-task">APUSH Chapter 10</li>
+                            <li class = "ordered-task dashboard-task">Turn in Log #1</li>
+                            <li class = "ordered-task dashboard-task">AP Physics Webassign</li>
+                            <li class = "ordered-task dashboard-task">Second Task</li>
                         </ol>
                     </div>
                 
@@ -170,13 +160,15 @@ PolyTask Pre-Alpha Phase
                 
                 <div class = "confirmation-wrapper">
                     <button class = "cancel button">Cancel</button>
-                    <button class = "confirm button">Confirm</button>
+                    <button id="confirm-task" class = "confirm button">Confirm</button>
                 </div>
                 
             </div>
         </div>
         
         <!--Templates -->
+        
+        <!--Dashboard Box Template-->
         <template id = "dashboard-box-template-wrapper">
             <div id = "dashboard-box-template" class = "dashboard-box">
                 <h1 class = "dashboard-box-title"></h1>
@@ -186,6 +178,7 @@ PolyTask Pre-Alpha Phase
             </div>
         </template>
         
+         <!--Project Information Template (part of dashboard box)-->
         <template id = "project-container-template-wrapper">
             <div id = "project-container-template" class= "project-container">
                 <div class = "day-counter">
@@ -197,6 +190,21 @@ PolyTask Pre-Alpha Phase
                     <p class = "project-info"></p>
                 </div>
             </div>
+        </template>
+        
+        <!--Unordered Task element for the dashboard-->
+        <template id = "unordered-dashboard-task-template-wrapper">
+            <p id = "unordered-dashboard-task-template" class = "unordered-task dashboard-task"></p>
+        </template>
+         
+        <!--Ordered Task LIST for the dashboard -->
+        <template id = "ordered-dashboard-list-template-wrapper">
+            <ol id = "ordered-dashboard-list-template" class="dashboard-list"></ol>
+        </template>
+        
+        <!-- Ordered task ELEMENT for the dashboard -->
+        <template id= "ordered-dashboard-task-template-wrapper">
+            <li id = "ordered-dashboard-task-template-wrapper" class = "ordered-task dashboard-task"></li>
         </template>
         
         <!--Poly Task Script-->

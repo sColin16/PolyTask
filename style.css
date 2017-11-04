@@ -46,6 +46,22 @@ Define the color pallete of the application
     background-color: #bc81d3;
 }
 
+.primary-blue {
+    background-color: #0f8095
+}
+
+.secondary-blue {
+    background-color: #7bc0cc;
+}
+
+.primary-orange {
+    background-color: #f28013;
+}
+
+.secondary-orange {
+    background-color:#ffca97;
+}
+
 #navbar {
     position:fixed;
     bottom:0;
@@ -124,6 +140,26 @@ Define the color pallete of the application
     margin:0;
     position:relative;
     color:white
+}
+
+.dashboard-task {
+    font-size:44px;
+    margin:0;
+    font-weight:bold;
+}
+
+.unordered-task {
+    padding:15px 80px;
+}
+
+.ordered-task {
+    padding: 15px 0;
+}
+
+.dashboard-list {
+    font-size:44px;
+    padding:10px 80px;
+    margin:0;
 }
 
 .project-container {
