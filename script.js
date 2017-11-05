@@ -131,6 +131,7 @@ function onLoad(){
     }
     
     document.getElementById("confirm-task").addEventListener("touchstart", function(){addNewTask(); hideOverlays();});
+    document.getElementById("cancel-task").addEventListener("touchstart" ,hideOverlays);
     
     openTab("dashboard");
     

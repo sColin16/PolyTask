@@ -227,6 +227,15 @@ Define the color pallete of the application
     font-size:44px;
     font-family:Trebuchet MS;
     text-align: center;
+    padding: 10px;
+    border: none;
+    border-bottom: solid 2px #c9c9c9;
+    transition: border 0.3s;
+    outline:none;
+}
+
+.title-input:focus {
+    border-bottom: solid 3px #969696;
 }
 
 .overlay-backdrop {
@@ -240,6 +249,10 @@ Define the color pallete of the application
     bottom: 0;
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    -webkit-animation-name: fadein;/*animate backdrop*/
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadein;
+    animation-duration: 0.4s
 }
 
 .overlay-content {
@@ -249,6 +262,10 @@ Define the color pallete of the application
     height:80%;
     left:10%;
     top: 8%;
+    -webkit-animation-name: animatetop;/*animate backdrop*/
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
 }
 
 .overlay-title {
@@ -269,18 +286,19 @@ Define the color pallete of the application
 .confirmation-wrapper {
     width:100%;
     text-align:center;
-    margin:20px;
+    margin:0;
     position:absolute;
     bottom:0;
 }
 
 .button {
-    font-size:44px;
+    font-size: 44px;
     font-family: Trebuchet MS;
-    height:100px;
-    width:250px;
-    margin:50px;
-    text-align:center;
+    height: 125px;
+    width: 50%;
+    margin: -3px;
+    text-align: center;
+    border: none;
 }
 
 .confirm {
@@ -302,14 +320,27 @@ Prevent font from rendering larger than intended on iPhone
   }
 }
 
-#Test {
-    z-index:0;
-    font-size: 100px;
-    display: none;
-    position:fixed;
+/*animations*/
+
+@-webkit-keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 8%; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 8%; opacity: 1}
+}
 
 
 
