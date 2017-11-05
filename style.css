@@ -257,15 +257,17 @@ Define the color pallete of the application
 
 .overlay-content {
     background-color: white;
-    position:fixed;
+    position:relative;
+    overflow:hidden;
     width:80%;
     height:80%;
     left:10%;
     top: 8%;
+    border-radius:20px;
     -webkit-animation-name: animatetop;/*animate backdrop*/
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
 }
 
 .overlay-title {
